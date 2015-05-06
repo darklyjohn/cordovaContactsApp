@@ -1,0 +1,18 @@
+<ion-view view-title="Playlists">
+  <!--<ion-pane>-->
+    <!--<ion-header-bar class="bar-stable">-->
+
+    <!--</ion-header-bar>-->
+  <!--</ion-pane>-->
+  <ion-content>
+    <button class="button" ng-click="getContactsList()">Load Contacts</button>
+      <span ng-show="hasError">
+        {{error}}
+      </span>
+    <ion-list>
+      <ion-item ng-repeat="contact in contacts" href="#/app/contact/{{contact}}">
+        {{contact.displayName}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
